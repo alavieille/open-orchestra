@@ -59,6 +59,8 @@ class AppKernel extends Kernel
             new Knp\Bundle\GaufretteBundle\KnpGaufretteBundle(),
             new Solution\MongoAggregationBundle\SolutionMongoAggregationBundle(),
             new OpenOrchestra\ModelLogBundle\OpenOrchestraModelLogBundle(),
+
+            new Puli\SymfonyBundle\PuliBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
