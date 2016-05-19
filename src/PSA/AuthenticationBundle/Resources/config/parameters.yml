@@ -1,0 +1,3 @@
+parameters:
+    psa_authentication.directory_ldap.type: 'xml'
+    psa_authentication.directory_ldap.filepath: '/var/www/html/web/ldap.xml'

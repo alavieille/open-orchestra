@@ -96,6 +96,8 @@ fos_user:
     user_class: OpenOrchestra\UserBundle\Document\User
     group:
         group_class: OpenOrchestra\GroupBundle\Document\Group
+    service:
+        user_manager: psa_authentication.user_manager
 
 stof_doctrine_extensions:
     mongodb:

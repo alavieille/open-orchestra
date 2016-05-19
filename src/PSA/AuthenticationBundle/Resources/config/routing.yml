@@ -1,0 +1,3 @@
+psa_authentication_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: PSAAuthenticationBundle:Default:index }

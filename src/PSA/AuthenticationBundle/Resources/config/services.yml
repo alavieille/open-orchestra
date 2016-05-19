@@ -1,0 +1,19 @@
+#    psa_authentication.example:
+#        class: PSA\AuthenticationBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+parameters:
+    psa_authentication.user_manager.class : PSA\AuthenticationBundle\Doctrine\UserManager
+    psa_authentication.encoder.class: PSA\AuthenticationBundle\Encoder\PsaEncoder
+
+services:
+    psa_authentication.user_manager:
+        class: %psa_authentication.user_manager.class%
+        arguments:
+            - @security.encoder_factory
+            - @fos_user.util.username_canonicalizer
+            - @fos_user.util.email_canonicalizer
+            - %psa_authentication.directory_ldap.type%
+            - %psa_authentication.directory_ldap.filepath%
+
+    psa_authentication.encoder:
+        class: %psa_authentication.encoder.class%

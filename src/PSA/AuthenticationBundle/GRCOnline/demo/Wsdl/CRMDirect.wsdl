@@ -1,0 +1,2249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://mpsa.com/Services/bend/CRMService" xmlns:ns2="http://namespace.xml.javax" xmlns:ns1="http://mpsa.com/Dcr/CRMService/" xmlns:ns3="http://fault.core.cxl.inetpsa.com" xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:tns="http://mpsa.com/Services/bend/CRMService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+    <wsdl:types>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:dcrc="http://mpsa.com/Dcr/CRMService/" xmlns:tns="http://mpsa.com/Services/bend/CRMService" targetNamespace="http://mpsa.com/Services/bend/CRMService">
+            <xsd:import namespace="http://mpsa.com/Dcr/CRMService/"/>
+
+            <xsd:element name="GetForeignData">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:GetForeignDataRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="GetForeignDataResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:GetForeignDataResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:complexType name="anyType2anyType2anyTypeMapMap">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="entry">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element maxOccurs="1" minOccurs="0" name="key" type="xsd:anyType"/>
+                                <xsd:element maxOccurs="1" minOccurs="0" name="value" type="tns:anyType2anyTypeMap"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="anyType2anyTypeMap">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="entry">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element maxOccurs="1" minOccurs="0" name="key" type="xsd:anyType"/>
+                                <xsd:element maxOccurs="1" minOccurs="0" name="value" type="xsd:anyType"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="ServiceException" type="ns3:ServiceException"/>
+            <xsd:element name="ActivatesAccount">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:ActivatesAccountRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ActivatesAccountResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:ActivatesAccountResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ForeignUnsubscribe">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:ForeignUnsubscribeRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ForeignUnsubscribeResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:ForeignUnsubscribeResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CheckAccountStatus">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:CheckAccountStatusRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CheckAccountStatusResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:CheckAccountStatusResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ForeignCreateAccount">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:ForeignCreateAccountRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ForeignCreateAccountResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:ForeignCreateAccountResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="SetPassword">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:SetPasswordRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="SetPasswordResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:SetPasswordResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="GetAuthenticatedTicket">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:GetAuthenticatedTicketRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="GetAuthenticatedTicketResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:GetAuthenticatedTicketResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CheckToken">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:CheckTokenRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CheckTokenResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:CheckTokenResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="UpdateForeignAccount">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:UpdateForeignAccountRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="UpdateForeignAccountResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:UpdateForeignAccountResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="UpdateElement">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:UpdateElementRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="UpdateElementResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:UpdateElementResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="PushElement">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:PushElementRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="PushElementResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:PushElementResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Subscribe">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:SuscribeRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="SubscribeResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:SuscribeResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="GetAccount">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:GetAccountRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="GetAccountResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:GetAccountResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="GetAccountLocalized">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:GetAccountLocalizedRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="GetAccountLocalizedResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:GetAccountResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ForeignUpdateRelationship">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:ForeignUpdateRelationshipRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ForeignUpdateRelationshipResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:UpdateRelationshipResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="InitAccount">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:InitAccountRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="InitAccountResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:InitAccountResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="UpdateRelationShip">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:UpdateRelationshipRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="UpdateRelationShipResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:UpdateRelationshipResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CreateAccount">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:CreateAccountRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CreateAccountResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:CreateAccountResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="SubscribeNewsletter">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:SubscribeNewsletterRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="SubscribeNewsletterResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:SubscribeNewsletterResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CheckSiteSubscriptions">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:CheckSiteSubscriptionsRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CheckSiteSubscriptionsResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:CheckSiteSubscriptionsResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="GetReferential">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:GetReferentialRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="GetReferentialResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:GetReferentialResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ForeignUpdateElement">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:ForeignUpdateElementRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ForeignUpdateElementResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:UpdateElementResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="GetElement">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:GetElementRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="GetElementResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:GetElementResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="GetTicket">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:GetTicketRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="GetTicketResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:GetTicketResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="TrustRequest">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:TrustRequestRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="TrustRequestResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:TrustRequestResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="UnsubscribeNewsletter">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:UnsubscribeNewsletterRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="UnsubscribeNewsletterResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:UnsubscribeNewsletterResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="UpdateAccount">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:UpdateAccountRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="UpdateAccountResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:UpdateAccountResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Unsubscribe">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:UnsubscribeRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="UnsubscribeResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:UnsubscribeResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="InitPassword">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:InitPasswordRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="InitPasswordResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="ns1:InitPasswordResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dcrc="http://mpsa.com/Dcr/CRMService/" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://mpsa.com/Dcr/CRMService/">
+            <!-- CRM service -->
+            <xs:simpleType name="ReturnCodeEnum">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="OK"/>
+                    <xs:enumeration value="BAD"/>
+                    <xs:enumeration value="ERROR"/>
+                    <xs:enumeration value="EXPIRED"/>
+                    <xs:enumeration value="NOT_AUTHORIZED"/>
+                    <xs:enumeration value="AUTHENTICATION_FAILED"/>
+                    <xs:enumeration value="SITE_CODE_NOT_FOUND"/>
+                    <xs:enumeration value="ERROR_MAIL_FORMAT"/>
+                    <xs:enumeration value="ERROR_PASSWORD_FORMAT"/>
+                    <xs:enumeration value="ERROR_NWL_UNKNOWN"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="StatusCodeEnum">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="NA"/>
+                    <xs:enumeration value="KNOWN"/>
+                    <xs:enumeration value="UNKNOWN"/>
+                    <xs:enumeration value="SIGNED_SUBSCRIBER"/>
+                    <xs:enumeration value="NOT_SUBSCRIBER"/>
+                    <xs:enumeration value="NO_SUBSCRIPTIONS"/>
+                    <xs:enumeration value="NOT_ACTIVATED"/>
+                    <xs:enumeration value="UNSIGNED_SUBSCRIBER"/>
+                    <xs:enumeration value="NEED_CONFIRMATION"/>
+                    <xs:enumeration value="NOT_INITIALIZED"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="PropertyStatusEnum">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="OK"/>
+                    <xs:enumeration value="NOT_UNIQUE"/>
+                    <xs:enumeration value="NOT_AUTHORIZED"/>
+                    <xs:enumeration value="NOT_WELL_FORMATTED"/>
+                    <xs:enumeration value="EMPTY_NOT_PERMITTED"/>
+                    <xs:enumeration value="NULL_NOT_PERMITTED"/>
+                    <xs:enumeration value="NOT_INT"/>
+                    <xs:enumeration value="NOT_KNOWN"/>
+                    <xs:enumeration value="BAD"/>
+                    <xs:enumeration value="NOT_FOUND_IN_REFERENTIAL"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="Id">
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="[A-Z]{4}[0-9]{12}"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:complexType name="ArrayOfAccountProperty">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="AccountProperty" nillable="true" type="dcrc:AccountProperty"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="AccountProperty">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="PropertyCode" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PropertyValue" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PropertyCulture" type="xs:string"/>
+                    <xs:element name="PropertyStatus" type="dcrc:PropertyStatusEnum"/>
+                    <xs:element name="IsReferenced" type="xs:boolean"/>
+                    <xs:element name="IsTrusted" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ArrayOfReferentialProperty">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="ReferentialProperty" nillable="true" type="dcrc:ReferentialProperty"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ReferentialProperty">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="CountryCode" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Culture" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Label" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Type" type="xs:string"/>
+                    <xs:element name="Index" type="xs:int"/>
+                    <xs:element minOccurs="0" name="RefCode" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ArrayOfSubscriptionProperty">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="Property" nillable="true" type="dcrc:Property"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ArrayOfSubscriptionObject">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="SubscriptionObject" nillable="true" type="dcrc:SubscriptionObject"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="SubscriptionObject">
+                <xs:sequence>
+                    <xs:element name="SiteCode" type="xs:string"/>
+                    <xs:element name="SiteTitle" type="xs:string"/>
+                    <xs:element minOccurs="0" name="SiteCountry" type="xs:string"/>
+                    <xs:element name="SubscriptionType" type="xs:string"/>
+                    <xs:element name="SubscriptionCode" type="xs:string"/>
+                    <xs:element name="SubscriptionDate" type="xs:string"/>
+                    <xs:element minOccurs="0" name="SubscriptionActivationDate" type="xs:string"/>
+                    <xs:element name="SubscriptionTrusted" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="Properties" nillable="true" type="dcrc:Property"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Property">
+                <xs:sequence>
+                    <xs:element name="PropertyCode" type="xs:string"/>
+                    <xs:element name="PropertyKey" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PropertyValue" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PropertyCulture" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="GetForeignDataRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Ticket" type="xs:string"/>
+                        <xs:element minOccurs="0" name="SiteCode" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetForeignDataResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="AccountId" type="dcrc:Id"/>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                        <xs:element minOccurs="0" name="AccountProperties" type="dcrc:ArrayOfAccountProperty"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ActivatesAccountRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Ticket" type="xs:string"/>
+                        <xs:element minOccurs="0" name="SiteCode" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ActivatesAccountResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                        <xs:element minOccurs="0" name="AccessToken" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="CheckAccountStatusRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="email" type="xs:string"/>
+                        <xs:element minOccurs="0" name="siteCode" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="CheckAccountStatusResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                        <xs:element name="StatusCode" type="dcrc:StatusCodeEnum"/>
+                        <xs:element name="AccountId" type="dcrc:Id"/>
+                        <xs:element minOccurs="0" name="Email" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="CheckStatusResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                        <xs:element name="StatusCode" type="dcrc:StatusCodeEnum"/>
+                        <xs:element minOccurs="0" name="Email" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="CheckTokenRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Ticket" type="xs:string"/>
+                        <xs:element minOccurs="0" name="siteCode" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="CheckTokenResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="TrustRequestRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="gitId" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="TrustRequestResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="CreateAccountRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="AccountProperties" type="dcrc:ArrayOfAccountProperty"/>
+                        <xs:element minOccurs="0" name="SiteCode" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="CreateAccountResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                        <xs:element minOccurs="0" name="Activate_ticket" type="xs:string"/>
+                        <xs:element name="AccountId" type="dcrc:Id"/>
+                        <xs:element minOccurs="0" name="AccountProperties" type="dcrc:ArrayOfAccountProperty"/>
+                        <xs:element name="StatusCode" type="dcrc:StatusCodeEnum"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ForeignCreateAccountRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="AccountProperties" type="dcrc:ArrayOfAccountProperty"/>
+                        <xs:element minOccurs="0" name="SiteCode" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ForeignCreateAccountResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                        <xs:element minOccurs="0" name="Activate_ticket" type="xs:string"/>
+                        <xs:element name="AccountId" type="dcrc:Id"/>
+                        <xs:element minOccurs="0" name="AccountProperties" type="dcrc:ArrayOfAccountProperty"/>
+                        <xs:element name="StatusCode" type="dcrc:StatusCodeEnum"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ForeignUnsubscribeRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Ticket" type="xs:string"/>
+                        <xs:element minOccurs="0" name="SiteCode" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ForeignUnsubscribeResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                        <xs:element name="StatusCode" type="dcrc:StatusCodeEnum"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetAccountRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="AuthenticatedTicket" type="xs:string"/>
+                        <xs:element minOccurs="0" name="SiteCode" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetAccountResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="AccountId" type="dcrc:Id"/>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                        <xs:element minOccurs="0" name="AccountProperties" type="dcrc:ArrayOfAccountProperty"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetAuthenticatedTicketRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:choice>
+                            <xs:element minOccurs="0" name="Email" type="xs:string"/>
+                            <xs:element minOccurs="0" name="CustomerKEY" type="dcrc:Customerkey"/>
+                        </xs:choice>
+                        <xs:element minOccurs="0" name="Password" type="xs:string"/>
+                        <xs:element minOccurs="0" name="SiteCode" type="xs:string"/>
+                        <xs:element minOccurs="0" name="Action" type="xs:string"/>
+                        <xs:element name="Duration" type="xs:int"/>
+                        <xs:element minOccurs="0" name="Remember" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetAuthenticatedTicketResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                        <xs:element minOccurs="0" name="AuthenticatedTicket" type="xs:string"/>
+                        <xs:element name="StatusCode" type="dcrc:StatusCodeEnum"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetReferentialRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="ReferentialType" type="xs:string"/>
+                        <xs:element minOccurs="0" name="Culture" type="xs:string"/>
+                        <xs:element minOccurs="0" name="SiteCode" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetReferentialResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                        <xs:element minOccurs="0" name="ReferentialProperties" type="dcrc:ArrayOfReferentialProperty"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetTicketRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="SiteCode" type="xs:string"/>
+                        <xs:choice>
+                            <xs:element minOccurs="0" name="Email" type="xs:string"/>
+                            <xs:element minOccurs="0" name="CustomerOID" type="dcrc:UniqueIdentifier"/>
+                            <xs:element minOccurs="0" name="CustomerKEY" type="dcrc:Customerkey"/>
+                        </xs:choice>
+                        <xs:element minOccurs="0" name="Action" type="xs:string"/>
+                        <xs:element name="Duration" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetTicketResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Ticket" type="xs:string"/>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                        <xs:element name="StatusCode" type="dcrc:StatusCodeEnum"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="InitPasswordRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Password" type="xs:string"/>
+                        <xs:element minOccurs="0" name="Ticket" type="xs:string"/>
+                        <xs:element minOccurs="0" name="SiteCode" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="InitPasswordResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="SetPasswordRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Password" type="xs:string"/>
+                        <xs:element minOccurs="0" name="Ticket" type="xs:string"/>
+                        <xs:element minOccurs="0" name="SiteCode" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="SetPasswordResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="SuscribeRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="AuthenticatedTicket" type="xs:string"/>
+                        <xs:element minOccurs="0" name="SiteCode" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="SuscribeResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                        <xs:element name="StatusCode" type="dcrc:StatusCodeEnum"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="SubscribeNewsletterRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Ticket" type="xs:string"/>
+                        <xs:element minOccurs="0" name="SiteCode" type="xs:string"/>
+                        <xs:element minOccurs="0" name="NewsletterCode" type="xs:string"/>
+                        <xs:element minOccurs="0" name="Properties" type="dcrc:ArrayOfSubscriptionProperty"/>
+                        <xs:element minOccurs="0" name="DateActivation" type="xs:dateTime"/>
+                        <xs:element name="StatusAccount" type="xs:boolean"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="SubscribeNewsletterResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                        <xs:element name="StatusCode" type="dcrc:StatusCodeEnum"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="UnsubscribeRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="AuthenticatedTicket" type="xs:string"/>
+                        <xs:element minOccurs="0" name="SiteCode" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="UnsubscribeResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                        <xs:element name="StatusCode" type="dcrc:StatusCodeEnum"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="UnsubscribeNewsletterRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Ticket" type="xs:string"/>
+                        <xs:element minOccurs="0" name="SiteCode" type="xs:string"/>
+                        <xs:element minOccurs="0" name="NewsletterCode" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="UnsubscribeNewsletterResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                        <xs:element name="StatusCode" type="dcrc:StatusCodeEnum"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="UpdateAccountRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="AuthenticatedTicket" type="xs:string"/>
+                        <xs:element minOccurs="0" name="AccountProperties" type="dcrc:ArrayOfAccountProperty"/>
+                        <xs:element minOccurs="0" name="SiteCode" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="UpdateAccountResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="AccountId" type="dcrc:Id"/>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                        <xs:element minOccurs="0" name="AccountProperties" type="dcrc:ArrayOfAccountProperty"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="UpdateForeignAccountRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Ticket" type="xs:string"/>
+                        <xs:element minOccurs="0" name="AccountProperties" type="dcrc:ArrayOfAccountProperty"/>
+                        <xs:element minOccurs="0" name="SiteCode" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="UpdateForeignAccountResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="AccountId" type="dcrc:Id"/>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                        <xs:element minOccurs="0" name="AccountProperties" type="dcrc:ArrayOfAccountProperty"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="InitAccountRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Ticket" type="xs:string"/>
+                        <xs:element minOccurs="0" name="SiteCode" type="xs:string"/>
+                        <xs:element minOccurs="0" name="AccountProperties" type="dcrc:ArrayOfAccountProperty"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="InitAccountResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="AccountId" type="dcrc:Id"/>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                        <xs:element name="StatusCode" type="dcrc:StatusCodeEnum"/>
+                        <xs:element minOccurs="0" name="AccountProperties" type="dcrc:ArrayOfAccountProperty"/>
+                        <xs:element minOccurs="0" name="AccessToken" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="CheckSiteSubscriptionsRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Ticket" type="xs:string"/>
+                        <xs:element minOccurs="0" name="SiteCode" type="xs:string"/>
+                        <xs:element minOccurs="0" name="Culture" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="CheckSiteSubscriptionsResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ReturnCode" type="dcrc:ReturnCodeEnum"/>
+                        <xs:element minOccurs="0" name="SubscriptionObjects" type="dcrc:ArrayOfSubscriptionObject"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetAccountLocalizedRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="AuthenticatedTicket" type="xs:string"/>
+                        <xs:element minOccurs="0" name="SiteCode" type="xs:string"/>
+                        <xs:element minOccurs="0" name="Culture" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <!-- CUSTOMER@ -->
+            <xs:complexType name="Schema">
+                <xs:choice maxOccurs="unbounded">
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="description" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="nodescheme" type="dcrc:NodeScheme"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="elementscheme" type="dcrc:ElementScheme"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="referencescheme" type="dcrc:ReferenceScheme"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="datascheme" type="dcrc:DataScheme"/>
+                </xs:choice>
+            </xs:complexType>
+            <xs:complexType name="Instance">
+                <xs:choice maxOccurs="unbounded" minOccurs="0">
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="node" type="dcrc:Node"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="element" type="dcrc:Element"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="reference" type="dcrc:Reference"/>
+                </xs:choice>
+            </xs:complexType>
+            <xs:complexType name="Referentials">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="referential" type="dcrc:Referential"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="SearchAccountResult">
+                <xs:sequence>
+                    <xs:element maxOccurs="50" minOccurs="0" name="accountrow" type="dcrc:AccountRow"/>
+                </xs:sequence>
+                <xs:attribute name="rowcount" type="xs:integer"/>
+            </xs:complexType>
+            <xs:complexType name="NodeScheme">
+                <xs:choice maxOccurs="unbounded">
+                    <xs:element minOccurs="0" name="description" type="xs:string"/>
+                    <xs:element minOccurs="0" name="nodescheme" type="dcrc:NodeScheme"/>
+                    <xs:element minOccurs="0" name="elementscheme" type="dcrc:ElementScheme"/>
+                    <xs:element minOccurs="0" name="referencescheme" type="dcrc:ReferenceScheme"/>
+                    <xs:element minOccurs="0" name="datascheme" type="dcrc:DataScheme"/>
+                </xs:choice>
+                <xs:attribute name="name" type="xs:string" use="required"/>
+            </xs:complexType>
+            <xs:complexType name="ElementScheme">
+                <xs:choice maxOccurs="unbounded">
+                    <xs:element minOccurs="0" name="description" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="nodescheme" type="dcrc:NodeScheme"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="elementscheme" type="dcrc:ElementScheme"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="referencescheme" type="dcrc:ReferenceScheme"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="datascheme" type="dcrc:DataScheme"/>
+                </xs:choice>
+                <xs:attribute name="name" type="xs:string" use="required"/>
+                <xs:attribute name="occurs" type="dcrc:Occurs" use="required"/>
+            </xs:complexType>
+            <xs:complexType name="ReferenceScheme">
+                <xs:all minOccurs="0">
+                    <xs:element minOccurs="0" name="description" type="xs:string"/>
+                </xs:all>
+                <xs:attribute name="name" use="required"/>
+                <xs:attribute name="occurs" type="dcrc:Occurs" use="required"/>
+            </xs:complexType>
+            <xs:complexType name="DataScheme">
+                <xs:choice maxOccurs="unbounded">
+                    <xs:element minOccurs="0" name="description" type="xs:string"/>
+                    <xs:choice minOccurs="0">
+                        <xs:element name="referential" type="dcrc:Referential"/>
+                        <xs:element name="regex" type="xs:string"/>
+                    </xs:choice>
+                </xs:choice>
+                <xs:attribute name="searchable" type="dcrc:Searchable" use="required"/>
+                <xs:attribute name="codesi" type="xs:string" use="required"/>
+                <xs:attribute name="storagetype" type="dcrc:StorageType" use="required"/>
+                <xs:attribute name="editable" type="xs:boolean"/>
+            </xs:complexType>
+            <xs:complexType name="Referential">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="item" type="dcrc:Item"/>
+                </xs:sequence>
+                <xs:attribute name="code" type="xs:string" use="required"/>
+            </xs:complexType>
+            <xs:complexType name="Item">
+                <xs:choice maxOccurs="unbounded">
+                    <xs:element minOccurs="0" name="label" type="xs:string"/>
+                    <xs:element minOccurs="0" name="abbreviation" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="item" type="dcrc:Item"/>
+                </xs:choice>
+                <xs:attribute name="key" type="xs:string" use="required"/>
+                <xs:attribute name="iserror" type="xs:boolean"/>
+                <xs:attribute name="istrusted" type="xs:boolean"/>
+                <xs:attribute name="domain" type="xs:string"/>
+                <xs:attribute name="lastupdate" type="xs:dateTime"/>
+                <xs:attribute name="status" type="dcrc:DataStatus"/>
+            </xs:complexType>
+            <xs:complexType name="AccountRow">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="data" type="dcrc:Data"/>
+                </xs:sequence>
+                <xs:attribute name="oid" type="dcrc:UniqueIdentifier" use="required"/>
+            </xs:complexType>
+            <xs:complexType name="Node">
+                <xs:choice maxOccurs="unbounded">
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="data" type="dcrc:Data"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="element" type="dcrc:Element"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="node" type="dcrc:Node"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="reference" type="dcrc:Reference"/>
+                </xs:choice>
+                <xs:attribute name="name" type="xs:string" use="required"/>
+            </xs:complexType>
+            <xs:complexType name="Element">
+                <xs:choice maxOccurs="unbounded">
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="node" type="dcrc:Node"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="element" type="dcrc:Element"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="reference" type="dcrc:Reference"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="data" type="dcrc:Data"/>
+                </xs:choice>
+                <xs:attribute name="creationdate" type="xs:dateTime"/>
+                <xs:attribute name="domain" type="xs:string"/>
+                <xs:attribute name="lastupdate" type="xs:dateTime"/>
+                <xs:attribute name="name" type="xs:string" use="required"/>
+                <xs:attribute name="oid" type="dcrc:UniqueIdentifier"/>
+                <xs:attribute name="toremove" type="xs:boolean"/>
+            </xs:complexType>
+            <xs:complexType name="Reference">
+                <xs:choice>
+                    <xs:element name="byCode" type="dcrc:ReferenceByCode"/>
+                    <xs:element name="byId" type="dcrc:ReferenceById"/>
+                </xs:choice>
+                <xs:attribute name="name" type="xs:string" use="required"/>
+                <xs:attribute name="iserror" type="xs:boolean"/>
+                <xs:attribute name="status" type="dcrc:DataStatus"/>
+                <xs:attribute name="toremove" type="xs:boolean"/>
+            </xs:complexType>
+            <xs:complexType name="ReferenceById">
+                <xs:attribute name="oidref" type="dcrc:UniqueIdentifier" use="required"/>
+            </xs:complexType>
+            <xs:complexType name="ReferenceByCode">
+                <xs:attribute name="codesi" type="xs:string" use="required"/>
+                <xs:attribute name="value" type="xs:string" use="required"/>
+            </xs:complexType>
+            <xs:complexType name="Data">
+                <xs:choice>
+                    <xs:element maxOccurs="2" minOccurs="0" name="value" type="dcrc:Value"/>
+                    <xs:element maxOccurs="2" minOccurs="0" name="item" type="dcrc:Item"/>
+                </xs:choice>
+                <xs:attribute name="codesi" type="xs:string" use="required"/>
+                <xs:attribute name="match">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:int"/>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:complexType>
+            <xs:complexType name="Value">
+                <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                        <xs:attribute name="iserror" type="xs:boolean"/>
+                        <xs:attribute name="istrusted" type="xs:boolean"/>
+                        <xs:attribute name="domain" type="xs:string"/>
+                        <xs:attribute name="lastupdate" type="xs:dateTime"/>
+                        <xs:attribute name="status" type="dcrc:DataStatus"/>
+                    </xs:extension>
+                </xs:simpleContent>
+            </xs:complexType>
+            <xs:complexType name="StringArray">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="string" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Actor">
+                <xs:all>
+                    <xs:element name="subsidiary" type="xs:string"/>
+                    <xs:element name="role" type="dcrc:Role"/>
+                    <xs:element minOccurs="0" name="dealercode" type="xs:string"/>
+                    <xs:element name="businessname" type="xs:string"/>
+                    <xs:element name="psauserid" type="xs:string"/>
+                    <xs:element minOccurs="0" name="psauseremail" type="xs:string"/>
+                    <xs:element minOccurs="0" name="psafirstname" type="xs:string"/>
+                    <xs:element minOccurs="0" name="psalastname" type="xs:string"/>
+                    <xs:element minOccurs="0" name="psacivility" type="xs:string"/>
+                </xs:all>
+            </xs:complexType>
+            <xs:complexType name="Criteria">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="criteriaitem" type="dcrc:CriteriaItem"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:simpleType name="CriteriaItemString">
+                <xs:restriction base="xs:string"/>
+            </xs:simpleType>
+            <xs:complexType name="CriteriaItem">
+                <xs:simpleContent>
+                    <xs:extension base="dcrc:CriteriaItemString">
+                        <xs:attribute name="codesi" type="xs:string" use="required"/>
+                    </xs:extension>
+                </xs:simpleContent>
+            </xs:complexType>
+            <xs:simpleType name="UniqueIdentifier">
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="[A-Z]{4}[0-9]{12}"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="Customerkey">
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="[A-Z0-9]{9}"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="StorageType">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="datetime"/>
+                    <xs:enumeration value="unique"/>
+                    <xs:enumeration value="referential"/>
+                    <xs:enumeration value="string"/>
+                    <xs:enumeration value="stringbuffer"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="DataStatus">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="CANNOT_USE_BY_DEFAULT"/>
+                    <xs:enumeration value="MAX_LENGTH_EXEEDED"/>
+                    <xs:enumeration value="NOT_AN_EMAIL"/>
+                    <xs:enumeration value="NOT_CHANGED"/>
+                    <xs:enumeration value="NOT_DATETIME"/>
+                    <xs:enumeration value="NOT_REFERENCED"/>
+                    <xs:enumeration value="NOT_UNIQUE"/>
+                    <xs:enumeration value="NULL_NOT_PERMITTED"/>
+                    <xs:enumeration value="REGEX_FAILED"/>
+                    <xs:enumeration value="STRING_TRUNCATED"/>
+                    <xs:enumeration value="UNABLE_TO_ACCESS_THIS_ELEMENT_IN_THE_CURRENT_MODE"/>
+                    <xs:enumeration value="UPDATED IN FOREIGN MODE"/>
+                    <xs:enumeration value="UPDATED IN TRUSTED MODE"/>
+                    <xs:enumeration value="LAWFUL VIOLATED"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="Error">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="OK"/>
+                    <xs:enumeration value="DB_CONNECTION_FAILED"/>
+                    <xs:enumeration value="FAULT"/>
+                    <xs:enumeration value="NOT_AUTHORIZED"/>
+                    <xs:enumeration value="NOTE"/>
+                    <xs:enumeration value="UNKNOWN_ACCOUNT"/>
+                    <xs:enumeration value="UNKNOWN"/>
+                    <xs:enumeration value="XSD_VALIDATION_FAILED"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="Status">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="BAD REQUEST"/>
+                    <xs:enumeration value="BUSINESS_VALIDATION_FAILED"/>
+                    <xs:enumeration value="CONSUMER_OID_NOT_FOUND"/>
+                    <xs:enumeration value="DUPLICATE_ENTRY"/>
+                    <xs:enumeration value="ELEMENT_ALREADY_EXIST"/>
+                    <xs:enumeration value="ELEMENT_IS_NOT_FOUND"/>
+                    <xs:enumeration value="N/A"/>
+                    <xs:enumeration value="NO_RESULTS_FOUND"/>
+                    <xs:enumeration value="ONE_OR_MORE_REGEX_VALIDATION_FAILED"/>
+                    <xs:enumeration value="TOO_MANY_RESULT"/>
+                    <xs:enumeration value="UNABLE_TO_ACCESS_THIS_ELEMENT_IN_THE_CURRENT_MODE"/>
+                    <xs:enumeration value="UNKNOWN_STAKEHOLDER"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="Occurs">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="MANY"/>
+                    <xs:enumeration value="ONCE"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="Searchable">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="FALSE"/>
+                    <xs:enumeration value="TRUE"/>
+                    <xs:enumeration value="KEY"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="Role">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="DEALER"/>
+                    <xs:enumeration value="PARTNER"/>
+                    <xs:enumeration value="WARRANTY_SERVICE"/>
+                    <xs:enumeration value="CLAIM_SERVICE"/>
+                    <xs:enumeration value="FINANCIAL_SERVICE"/>
+                    <xs:enumeration value="BRAND"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:complexType name="Response">
+                <xs:sequence>
+                    <xs:element name="errorResponse" type="dcrc:Error"/>
+                    <xs:element name="statusResponse" type="dcrc:Status"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="GetElementRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Ticket" type="xs:string"/>
+                        <xs:element minOccurs="0" name="culture">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="[a-z]{2}\-[A-Z]{2}"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:choice minOccurs="0">
+                            <xs:element name="name" type="xs:string"/>
+                            <xs:element name="oid" type="xs:string"/>
+                        </xs:choice>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="UpdateElementRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="AuthenticatedTicket" type="xs:string"/>
+                        <xs:element minOccurs="0" name="culture">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="[a-z]{2}\-[A-Z]{2}"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="SiteCode" type="xs:string"/>
+                        <xs:element name="instance" type="dcrc:Instance"/>
+
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ForeignUpdateElementRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Ticket" type="xs:string"/>
+                        <xs:element minOccurs="0" name="culture">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="[a-z]{2}\-[A-Z]{2}"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="SiteCode" type="xs:string"/>
+                        <xs:element name="instance" type="dcrc:Instance"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="PushElementRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Ticket" type="xs:string"/>
+                        <xs:element minOccurs="0" name="culture">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="[a-z]{2}\-[A-Z]{2}"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="instance" type="dcrc:Instance"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="UpdateRelationshipRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:choice>
+                            <xs:element name="AuthenticatedTicket" type="xs:string"/>
+                            <xs:element name="Ticket" type="xs:string"/>
+                        </xs:choice>
+                        <xs:element minOccurs="0" name="culture">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="[a-z]{2}\-[A-Z]{2}"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="instance" type="dcrc:Instance"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ForeignUpdateRelationshipRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Ticket" type="xs:string"/>
+                        <xs:element minOccurs="0" name="culture">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="[a-z]{2}\-[A-Z]{2}"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="instance" type="dcrc:Instance"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetElementResponse">
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="dcrc:Response">
+                            <xs:sequence>
+                                <xs:element name="culture">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:pattern value="[a-z]{2}\-[A-Z]{2}"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="isForeignMode" type="xs:boolean"/>
+                                <xs:element name="instance" type="dcrc:Instance"/>
+                            </xs:sequence>
+                        </xs:extension>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="PushElementResponse">
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="dcrc:Response">
+                            <xs:sequence>
+                                <xs:element name="instance" type="dcrc:Instance"/>
+                            </xs:sequence>
+                        </xs:extension>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="UpdateRelationshipResponse">
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="dcrc:Response">
+                            <xs:sequence>
+                                <xs:element name="instance" type="dcrc:Instance"/>
+                            </xs:sequence>
+                        </xs:extension>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="UpdateElementResponse">
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="dcrc:Response">
+                            <xs:sequence>
+                                <xs:element minOccurs="0" name="culture">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:pattern value="[a-z]{2}\-[A-Z]{2}"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="isForeignMode" type="xs:boolean"/>
+                                <xs:element name="instance" type="dcrc:Instance"/>
+                            </xs:sequence>
+                        </xs:extension>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://fault.core.cxl.inetpsa.com">
+            <xsd:complexType name="ServiceException">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="detail" nillable="true" type="xsd:anyType"/>
+                    <xsd:element minOccurs="0" name="faultCode" nillable="true" type="ns2:QName"/>
+                    <xsd:element minOccurs="0" name="message" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="namespaces" nillable="true" type="tns:anyType2anyType2anyTypeMapMap"/>
+                    <xsd:element minOccurs="0" name="reason" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="role" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="subCode" nillable="true" type="ns2:QName"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:schema>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://namespace.xml.javax">
+            <xsd:complexType name="QName">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="localPart" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="namespaceURI" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="prefix" nillable="true" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="UpdateRelationShipResponse">
+        <wsdl:part name="parameters" element="tns:UpdateRelationShipResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="ForeignUnsubscribeResponse">
+        <wsdl:part name="parameters" element="tns:ForeignUnsubscribeResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="SubscribeNewsletterResponse">
+        <wsdl:part name="parameters" element="tns:SubscribeNewsletterResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetTicketResponse">
+        <wsdl:part name="parameters" element="tns:GetTicketResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="CheckSiteSubscriptionsRequest">
+        <wsdl:part name="parameters" element="tns:CheckSiteSubscriptions">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="UpdateElementResponse">
+        <wsdl:part name="parameters" element="tns:UpdateElementResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetAccountLocalizedRequest">
+        <wsdl:part name="parameters" element="tns:GetAccountLocalized">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="InitAccountRequest">
+        <wsdl:part name="parameters" element="tns:InitAccount">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="PushElementResponse">
+        <wsdl:part name="parameters" element="tns:PushElementResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetElementResponse">
+        <wsdl:part name="parameters" element="tns:GetElementResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="UpdateRelationShipRequest">
+        <wsdl:part name="parameters" element="tns:UpdateRelationShip">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetAuthenticatedTicketResponse">
+        <wsdl:part name="parameters" element="tns:GetAuthenticatedTicketResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="InitPasswordResponse">
+        <wsdl:part name="parameters" element="tns:InitPasswordResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="ForeignUpdateElementRequest">
+        <wsdl:part name="parameters" element="tns:ForeignUpdateElement">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="UpdateForeignAccountRequest">
+        <wsdl:part name="parameters" element="tns:UpdateForeignAccount">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="InitPasswordRequest">
+        <wsdl:part name="parameters" element="tns:InitPassword">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetReferentialRequest">
+        <wsdl:part name="parameters" element="tns:GetReferential">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="SubscribeRequest">
+        <wsdl:part name="parameters" element="tns:Subscribe">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="UpdateAccountRequest">
+        <wsdl:part name="parameters" element="tns:UpdateAccount">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="CheckTokenResponse">
+        <wsdl:part name="parameters" element="tns:CheckTokenResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="CreateAccountRequest">
+        <wsdl:part name="parameters" element="tns:CreateAccount">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="SubscribeNewsletterRequest">
+        <wsdl:part name="parameters" element="tns:SubscribeNewsletter">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="CheckAccountStatusRequest">
+        <wsdl:part name="parameters" element="tns:CheckAccountStatus">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="UnsubscribeNewsletterRequest">
+        <wsdl:part name="parameters" element="tns:UnsubscribeNewsletter">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="UnsubscribeResponse">
+        <wsdl:part name="parameters" element="tns:UnsubscribeResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="UpdateElementRequest">
+        <wsdl:part name="parameters" element="tns:UpdateElement">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="UpdateForeignAccountResponse">
+        <wsdl:part name="parameters" element="tns:UpdateForeignAccountResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="CreateAccountResponse">
+        <wsdl:part name="parameters" element="tns:CreateAccountResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="CheckTokenRequest">
+        <wsdl:part name="parameters" element="tns:CheckToken">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetAuthenticatedTicketRequest">
+        <wsdl:part name="parameters" element="tns:GetAuthenticatedTicket">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="UpdateAccountResponse">
+        <wsdl:part name="parameters" element="tns:UpdateAccountResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="TrustRequestRequest">
+        <wsdl:part name="parameters" element="tns:TrustRequest">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="SubscribeResponse">
+        <wsdl:part name="parameters" element="tns:SubscribeResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="ForeignUpdateRelationshipRequest">
+        <wsdl:part name="parameters" element="tns:ForeignUpdateRelationship">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="PushElementRequest">
+        <wsdl:part name="parameters" element="tns:PushElement">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetElementRequest">
+        <wsdl:part name="parameters" element="tns:GetElement">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="ActivatesAccountRequest">
+        <wsdl:part name="parameters" element="tns:ActivatesAccount">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="TrustRequestResponse">
+        <wsdl:part name="parameters" element="tns:TrustRequestResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="ForeignUnsubscribeRequest">
+        <wsdl:part name="parameters" element="tns:ForeignUnsubscribe">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="UnsubscribeRequest">
+        <wsdl:part name="parameters" element="tns:Unsubscribe">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="ForeignUpdateElementResponse">
+        <wsdl:part name="parameters" element="tns:ForeignUpdateElementResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetForeignDataResponse">
+        <wsdl:part name="parameters" element="tns:GetForeignDataResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetAccountResponse">
+        <wsdl:part name="parameters" element="tns:GetAccountResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="InitAccountResponse">
+        <wsdl:part name="parameters" element="tns:InitAccountResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="ForeignUpdateRelationshipResponse">
+        <wsdl:part name="parameters" element="tns:ForeignUpdateRelationshipResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="SetPasswordRequest">
+        <wsdl:part name="parameters" element="tns:SetPassword">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="ForeignCreateAccountRequest">
+        <wsdl:part name="parameters" element="tns:ForeignCreateAccount">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetReferentialResponse">
+        <wsdl:part name="parameters" element="tns:GetReferentialResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="ForeignCreateAccountResponse">
+        <wsdl:part name="parameters" element="tns:ForeignCreateAccountResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="CheckAccountStatusResponse">
+        <wsdl:part name="parameters" element="tns:CheckAccountStatusResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetForeignDataRequest">
+        <wsdl:part name="parameters" element="tns:GetForeignData">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="ServiceException">
+        <wsdl:part name="ServiceException" element="tns:ServiceException">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="ActivatesAccountResponse">
+        <wsdl:part name="parameters" element="tns:ActivatesAccountResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="SetPasswordResponse">
+        <wsdl:part name="parameters" element="tns:SetPasswordResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="CheckSiteSubscriptionsResponse">
+        <wsdl:part name="parameters" element="tns:CheckSiteSubscriptionsResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetAccountRequest">
+        <wsdl:part name="parameters" element="tns:GetAccount">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetAccountLocalizedResponse">
+        <wsdl:part name="parameters" element="tns:GetAccountLocalizedResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="UnsubscribeNewsletterResponse">
+        <wsdl:part name="parameters" element="tns:UnsubscribeNewsletterResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="GetTicketRequest">
+        <wsdl:part name="parameters" element="tns:GetTicket">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:portType name="CRMServicePortType">
+        <wsdl:operation name="GetForeignData">
+            <wsdl:input name="GetForeignDataRequest" message="tns:GetForeignDataRequest">
+            </wsdl:input>
+            <wsdl:output name="GetForeignDataResponse" message="tns:GetForeignDataResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="ActivatesAccount">
+            <wsdl:input name="ActivatesAccountRequest" message="tns:ActivatesAccountRequest">
+            </wsdl:input>
+            <wsdl:output name="ActivatesAccountResponse" message="tns:ActivatesAccountResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="ForeignUnsubscribe">
+            <wsdl:input name="ForeignUnsubscribeRequest" message="tns:ForeignUnsubscribeRequest">
+            </wsdl:input>
+            <wsdl:output name="ForeignUnsubscribeResponse" message="tns:ForeignUnsubscribeResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="CheckAccountStatus">
+            <wsdl:input name="CheckAccountStatusRequest" message="tns:CheckAccountStatusRequest">
+            </wsdl:input>
+            <wsdl:output name="CheckAccountStatusResponse" message="tns:CheckAccountStatusResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="ForeignCreateAccount">
+            <wsdl:input name="ForeignCreateAccountRequest" message="tns:ForeignCreateAccountRequest">
+            </wsdl:input>
+            <wsdl:output name="ForeignCreateAccountResponse" message="tns:ForeignCreateAccountResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="SetPassword">
+            <wsdl:input name="SetPasswordRequest" message="tns:SetPasswordRequest">
+            </wsdl:input>
+            <wsdl:output name="SetPasswordResponse" message="tns:SetPasswordResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetAuthenticatedTicket">
+            <wsdl:input name="GetAuthenticatedTicketRequest" message="tns:GetAuthenticatedTicketRequest">
+            </wsdl:input>
+            <wsdl:output name="GetAuthenticatedTicketResponse" message="tns:GetAuthenticatedTicketResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="CheckToken">
+            <wsdl:input name="CheckTokenRequest" message="tns:CheckTokenRequest">
+            </wsdl:input>
+            <wsdl:output name="CheckTokenResponse" message="tns:CheckTokenResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateForeignAccount">
+            <wsdl:input name="UpdateForeignAccountRequest" message="tns:UpdateForeignAccountRequest">
+            </wsdl:input>
+            <wsdl:output name="UpdateForeignAccountResponse" message="tns:UpdateForeignAccountResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateElement">
+            <wsdl:input name="UpdateElementRequest" message="tns:UpdateElementRequest">
+            </wsdl:input>
+            <wsdl:output name="UpdateElementResponse" message="tns:UpdateElementResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="PushElement">
+            <wsdl:input name="PushElementRequest" message="tns:PushElementRequest">
+            </wsdl:input>
+            <wsdl:output name="PushElementResponse" message="tns:PushElementResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="Subscribe">
+            <wsdl:input name="SubscribeRequest" message="tns:SubscribeRequest">
+            </wsdl:input>
+            <wsdl:output name="SubscribeResponse" message="tns:SubscribeResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetAccount">
+            <wsdl:input name="GetAccountRequest" message="tns:GetAccountRequest">
+            </wsdl:input>
+            <wsdl:output name="GetAccountResponse" message="tns:GetAccountResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetAccountLocalized">
+            <wsdl:input name="GetAccountLocalizedRequest" message="tns:GetAccountLocalizedRequest">
+            </wsdl:input>
+            <wsdl:output name="GetAccountLocalizedResponse" message="tns:GetAccountLocalizedResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="ForeignUpdateRelationship">
+            <wsdl:input name="ForeignUpdateRelationshipRequest" message="tns:ForeignUpdateRelationshipRequest">
+            </wsdl:input>
+            <wsdl:output name="ForeignUpdateRelationshipResponse" message="tns:ForeignUpdateRelationshipResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="InitAccount">
+            <wsdl:input name="InitAccountRequest" message="tns:InitAccountRequest">
+            </wsdl:input>
+            <wsdl:output name="InitAccountResponse" message="tns:InitAccountResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateRelationShip">
+            <wsdl:input name="UpdateRelationShipRequest" message="tns:UpdateRelationShipRequest">
+            </wsdl:input>
+            <wsdl:output name="UpdateRelationShipResponse" message="tns:UpdateRelationShipResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="CreateAccount">
+            <wsdl:input name="CreateAccountRequest" message="tns:CreateAccountRequest">
+            </wsdl:input>
+            <wsdl:output name="CreateAccountResponse" message="tns:CreateAccountResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="SubscribeNewsletter">
+            <wsdl:input name="SubscribeNewsletterRequest" message="tns:SubscribeNewsletterRequest">
+            </wsdl:input>
+            <wsdl:output name="SubscribeNewsletterResponse" message="tns:SubscribeNewsletterResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="CheckSiteSubscriptions">
+            <wsdl:input name="CheckSiteSubscriptionsRequest" message="tns:CheckSiteSubscriptionsRequest">
+            </wsdl:input>
+            <wsdl:output name="CheckSiteSubscriptionsResponse" message="tns:CheckSiteSubscriptionsResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetReferential">
+            <wsdl:input name="GetReferentialRequest" message="tns:GetReferentialRequest">
+            </wsdl:input>
+            <wsdl:output name="GetReferentialResponse" message="tns:GetReferentialResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="ForeignUpdateElement">
+            <wsdl:input name="ForeignUpdateElementRequest" message="tns:ForeignUpdateElementRequest">
+            </wsdl:input>
+            <wsdl:output name="ForeignUpdateElementResponse" message="tns:ForeignUpdateElementResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetElement">
+            <wsdl:input name="GetElementRequest" message="tns:GetElementRequest">
+            </wsdl:input>
+            <wsdl:output name="GetElementResponse" message="tns:GetElementResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetTicket">
+            <wsdl:input name="GetTicketRequest" message="tns:GetTicketRequest">
+            </wsdl:input>
+            <wsdl:output name="GetTicketResponse" message="tns:GetTicketResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="TrustRequest">
+            <wsdl:input name="TrustRequestRequest" message="tns:TrustRequestRequest">
+            </wsdl:input>
+            <wsdl:output name="TrustRequestResponse" message="tns:TrustRequestResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="UnsubscribeNewsletter">
+            <wsdl:input name="UnsubscribeNewsletterRequest" message="tns:UnsubscribeNewsletterRequest">
+            </wsdl:input>
+            <wsdl:output name="UnsubscribeNewsletterResponse" message="tns:UnsubscribeNewsletterResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateAccount">
+            <wsdl:input name="UpdateAccountRequest" message="tns:UpdateAccountRequest">
+            </wsdl:input>
+            <wsdl:output name="UpdateAccountResponse" message="tns:UpdateAccountResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="Unsubscribe">
+            <wsdl:input name="UnsubscribeRequest" message="tns:UnsubscribeRequest">
+            </wsdl:input>
+            <wsdl:output name="UnsubscribeResponse" message="tns:UnsubscribeResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="InitPassword">
+            <wsdl:input name="InitPasswordRequest" message="tns:InitPasswordRequest">
+            </wsdl:input>
+            <wsdl:output name="InitPasswordResponse" message="tns:InitPasswordResponse">
+            </wsdl:output>
+            <wsdl:fault name="ServiceException" message="tns:ServiceException">
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="CRMServiceHttpBinding" type="tns:CRMServicePortType">
+        <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="GetForeignData">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="GetForeignDataRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="GetForeignDataResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="ActivatesAccount">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="ActivatesAccountRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="ActivatesAccountResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="ForeignUnsubscribe">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="ForeignUnsubscribeRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="ForeignUnsubscribeResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="CheckAccountStatus">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="CheckAccountStatusRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="CheckAccountStatusResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="ForeignCreateAccount">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="ForeignCreateAccountRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="ForeignCreateAccountResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="SetPassword">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="SetPasswordRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="SetPasswordResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetAuthenticatedTicket">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="GetAuthenticatedTicketRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="GetAuthenticatedTicketResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="CheckToken">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="CheckTokenRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="CheckTokenResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateForeignAccount">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="UpdateForeignAccountRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="UpdateForeignAccountResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateElement">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="UpdateElementRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="UpdateElementResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="PushElement">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="PushElementRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="PushElementResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="Subscribe">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="SubscribeRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="SubscribeResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetAccount">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="GetAccountRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="GetAccountResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetAccountLocalized">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="GetAccountLocalizedRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="GetAccountLocalizedResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="ForeignUpdateRelationship">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="ForeignUpdateRelationshipRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="ForeignUpdateRelationshipResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="InitAccount">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="InitAccountRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="InitAccountResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateRelationShip">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="UpdateRelationShipRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="UpdateRelationShipResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="CreateAccount">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="CreateAccountRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="CreateAccountResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="SubscribeNewsletter">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="SubscribeNewsletterRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="SubscribeNewsletterResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="CheckSiteSubscriptions">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="CheckSiteSubscriptionsRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="CheckSiteSubscriptionsResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetReferential">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="GetReferentialRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="GetReferentialResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="ForeignUpdateElement">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="ForeignUpdateElementRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="ForeignUpdateElementResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetElement">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="GetElementRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="GetElementResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetTicket">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="GetTicketRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="GetTicketResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="TrustRequest">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="TrustRequestRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="TrustRequestResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="UnsubscribeNewsletter">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="UnsubscribeNewsletterRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="UnsubscribeNewsletterResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateAccount">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="UpdateAccountRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="UpdateAccountResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="Unsubscribe">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="UnsubscribeRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="UnsubscribeResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="InitPassword">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="InitPasswordRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="InitPasswordResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="CRMService">
+        <wsdl:port name="CRMServiceHttpPort" binding="tns:CRMServiceHttpBinding">
+            <wsdlsoap:address location="http://re7.dpdcr.citroen.com/crmws"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
