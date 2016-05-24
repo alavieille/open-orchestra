@@ -10,8 +10,6 @@ security:
     providers:
         fos_userbundle:
             id: fos_user.user_provider.username
-        psa_authentification:
-            id: psa_authentification.provider
 
     access_decision_manager:
         strategy: unanimous
