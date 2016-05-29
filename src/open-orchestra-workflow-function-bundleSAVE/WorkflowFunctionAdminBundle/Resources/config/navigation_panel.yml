@@ -1,0 +1,14 @@
+parameters:
+    open_orchestra_workflow_function_admin.navigation_panel.workflow_function.class: OpenOrchestra\WorkflowFunctionAdminBundle\NavigationPanel\Strategies\WorkflowFunctionPanelStrategy
+
+services:
+    open_orchestra_workflow_function_admin.navigation_panel.workflow_function:
+        class: %open_orchestra_workflow_function_admin.navigation_panel.workflow_function.class%
+        arguments:
+            - %open_orchestra_backoffice.navigation_panel.menu.administration%
+            - 365
+            - %open_orchestra_workflow_function_admin.navigation_panel.workflow_function.parameters%
+            - @translator
+
+        tags:
+            - { name: open_orchestra_backoffice.navigation_panel.strategy }
