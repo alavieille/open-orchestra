@@ -1,7 +1,8 @@
 open-orchestra-workflow-bundle
 ==============================
 sub repo
-The open orchestra workflow bundle
+
+éThe open orchestra workflow bundle
 
 | Service       | Badge         |
 | ------------- |:-------------:|
