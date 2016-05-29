@@ -1,4 +1,0 @@
-resolve_target_documents:
-        OpenOrchestra\WorkflowFunction\Model\WorkflowFunctionInterface: OpenOrchestra\WorkflowFunctionModelBundle\Document\WorkflowFunction
-        OpenOrchestra\WorkflowFunction\Model\AuthorizationInterface: OpenOrchestra\WorkflowFunctionModelBundle\Document\Authorization
-        OpenOrchestra\WorkflowFunction\Model\ReferenceInterface: OpenOrchestra\WorkflowFunctionModelBundle\Document\Reference
