@@ -24,7 +24,6 @@
     "open-orchestra/open-orchestra-elastica-bundle": "1.2.*@dev",
     "open-orchestra/open-orchestra-media-admin-bundle": "1.2.*@dev",
     "open-orchestra/open-orchestra-model-bundle": "1.2.*@dev",
-    "open-orchestra/open-orchestra-workflow-function-bundle": "1.2.*@dev",
 
     "innocead/captcha-bundle": "@dev",
     "friendsofsymfony/user-bundle": "@dev",
