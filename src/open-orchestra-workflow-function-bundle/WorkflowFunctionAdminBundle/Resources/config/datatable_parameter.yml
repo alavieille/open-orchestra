@@ -1,8 +1,0 @@
-parameters:
-    open_orchestra_workflow_function_admin.navigation_panel.workflow_function.parameters :
-        -
-          name : name
-          title : open_orchestra_backoffice.table.workflow_functions.name
-          visible : true
-          activateColvis : true
-          searchField : text
