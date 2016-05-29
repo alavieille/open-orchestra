@@ -1,0 +1,20 @@
+parameters:
+    open_orchestra_workflow_function_admin.transformer.workflow_function_collection.class: OpenOrchestra\WorkflowFunctionAdminBundle\Transformer\WorkflowFunctionCollectionTransformer
+    open_orchestra_workflow_function_admin.transformer.workflow_function.class: OpenOrchestra\WorkflowFunctionAdminBundle\Transformer\WorkflowFunctionTransformer
+
+services:
+    open_orchestra_workflow_function_admin.transformer.workflow_function_collection:
+        class: %open_orchestra_workflow_function_admin.transformer.workflow_function_collection.class%
+        arguments:
+            - %open_orchestra_workflow_function_admin.facade.workflow_function_collection.class%
+            - @security.authorization_checker
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+    open_orchestra_workflow_function_admin.transformer.log:
+        class: %open_orchestra_workflow_function_admin.transformer.workflow_function.class%
+        arguments:
+            - %open_orchestra_workflow_function_admin.facade.workflow_function.class%
+            - @open_orchestra_backoffice.manager.translation_choice
+            - @security.authorization_checker
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}

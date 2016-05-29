@@ -1,0 +1,58 @@
+{
+  "name": "open-orchestra/open-orchestra-workflow-function-bundle",
+  "description": "A workflow function bundle for Open Orchestra",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "OpenOrchestra community",
+      "homepage": "https://github.com/open-orchestra/open-orchestra-function-bundle/graphs/contributors"
+    }
+  ],
+
+  "require": {
+    "doctrine/data-fixtures": "~1.1.1",
+    "doctrine/mongodb-odm-bundle": "~3.1.0",
+    "solution/mongo-odm-aggregation-bundle": "~0.1.1",
+    "stof/doctrine-extensions-bundle": "~1.2.1",
+    "open-orchestra/open-orchestra-base-bundle": "1.2.*@dev",
+    "open-orchestra/open-orchestra-cms-bundle": "1.2.*@dev",
+
+    "friendsofsymfony/user-bundle": "@dev",
+    "innocead/captcha-bundle": "@dev",
+    "open-orchestra/open-orchestra-base-api-bundle": "@dev",
+    "open-orchestra/open-orchestra-bbcode-bundle": "@dev",
+    "open-orchestra/open-orchestra-display-bundle": "@dev",
+    "open-orchestra/open-orchestra-libs": "@dev",
+    "open-orchestra/open-orchestra-mongo-libs": "@dev",
+    "open-orchestra/open-orchestra-user-bundle": "@dev"
+  },
+
+  "require-dev": {
+    "codeclimate/php-test-reporter": "~0.3.2",
+    "phake/phake": "~2.1.0",
+    "phpunit/phpunit": "~4.8.0",
+
+    "open-orchestra/open-orchestra-model-bundle": "1.2.*@dev",
+
+    "open-orchestra/open-orchestra-model-interface": "@dev"
+  },
+
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.2.x-dev"
+    }
+  },
+
+  "config" : {
+    "bin-dir": "bin"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "OpenOrchestra\\WorkflowFunctionBundle\\": "WorkflowFunctionBundle/",
+      "OpenOrchestra\\WorkflowFunctionModelBundle\\": "WorkflowFunctionModelBundle/",
+      "OpenOrchestra\\WorkflowFunction\\": "WorkflowFunction/",
+      "OpenOrchestra\\WorkflowFunctionAdminBundle\\": "WorkflowFunctionAdminBundle/"
+    }
+  }
+}
